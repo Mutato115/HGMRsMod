@@ -70,21 +70,23 @@ public class TeBarrel extends TileEntity {
             TeBarrel master = this;
             traversingBarrels.add(this);
             while(!traversingBarrels.isEmpty()) {
-                TeBarrel storage = traversingBarrels.pop();
-                if(storage.isMaster()) {
-                    master = storage;
+                TeBarrel barrel = traversingBarrels.pop();
+                if(barrel.isMaster()) {
+                    master = barrel;
                 }
-                connectedBarrels.add(storage);
+                if (!connectedBarrels.contains(barrel)) {
+                	connectedBarrels.add(barrel);
+                }
                 for(ForgeDirection d : ForgeDirection.VALID_DIRECTIONS) {
-                    TileEntity te = worldObj.getTileEntity(storage.xCoord + d.offsetX, storage.yCoord + d.offsetY, storage.zCoord + d.offsetZ);
+                    TileEntity te = worldObj.getTileEntity(barrel.xCoord + d.offsetX, barrel.yCoord + d.offsetY, barrel.zCoord + d.offsetZ);
                     if(te instanceof TeBarrel && !connectedBarrels.contains(te)) {
                         traversingBarrels.add((TeBarrel)te);
                     }
                 }
             }
             Log.info("Setting master to " + master.xCoord + ", " + master.yCoord + ", " + master.zCoord + " for " + connectedBarrels.size() + " blocks");
-            for(TeBarrel storage : connectedBarrels) {
-                storage.setMaster(master, connectedBarrels.size());
+            for(TeBarrel barrel : connectedBarrels) {
+                barrel.setMaster(master, connectedBarrels.size());
             }
         }
     }
