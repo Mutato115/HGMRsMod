@@ -1,7 +1,11 @@
 tile.eagle_bronze_knocker_block.name=Eagle-Shaped Bronze Knocker
+tile.barrel.name=Barrel
+
 item.eagle_bronze_knocker.name=Eagle-Shaped Bronze Knocker
 
 gui.hgmrsmod.ravenclaw.confirm=Send Answer
 
 chat.hgmrsmod.ravenclaw.right_answer=Right Answer!
 chat.hgmrsmod.ravenclaw.wrong_answer=Wrong Answer!
+chat.hgmrsmod.hufflepuff.right_rhythm=Right Rhythm!
+chat.hgmrsmod.hufflepuff.wrong_rhythm=Wrong Rhythm!

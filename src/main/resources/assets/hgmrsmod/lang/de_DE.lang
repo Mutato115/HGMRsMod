@@ -1,7 +1,11 @@
 tile.eagle_bronze_knocker_block.name=Adlerförmiger  Türklopfer
+tile.barrel.name=Fass
+
 item.eagle_bronze_knocker.name=Adlerförmiger Türklopfer
 
 gui.hgmrsmod.ravenclaw.confirm=Antworten
 
 chat.hgmrsmod.ravenclaw.right_answer=Richtige Antwort!
 chat.hgmrsmod.ravenclaw.wrong_answer=Falsche Antwort!
+chat.hgmrsmod.hufflepuff.right_rhythm=Richtiger Rhythmus!
+chat.hgmrsmod.hufflepuff.wrong_rhythm=Falscher Rhythmus!
