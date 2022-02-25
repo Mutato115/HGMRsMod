@@ -8,8 +8,10 @@ import mutato115.mods.hgmrs.blocks.BlockBarrel;
 import mutato115.mods.hgmrs.blocks.BlockEagleBronzeKnocker;
 import mutato115.mods.hgmrs.blocks.BlockFatLadyPortrait;
 import mutato115.mods.hgmrs.blocks.TestPortrait;
+import mutato115.mods.hgmrs.items.ItemBarrel;
 import mutato115.mods.hgmrs.items.ItemEagleBronzeKnocker;
 import mutato115.mods.hgmrs.tiles.RenderFatLadyPortrait;
+import mutato115.mods.hgmrs.tiles.TeBarrel;
 import mutato115.mods.hgmrs.tiles.TeFatLadyPortrait;
 import net.minecraft.block.Block;
 
@@ -36,8 +38,9 @@ public class BlockRegistry {
 		//GameRegistry.registerBlock(fatLadyPortrait, fatLadyPortrait.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(eagleBronzeKnocker, eagleBronzeKnocker.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(testPortrait, testPortrait.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(barrel, barrel.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(barrel, ItemBarrel.class, barrel.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerTileEntity(TeBarrel.class, "barrel");
 	}
 	
 	@SideOnly(Side.CLIENT)
