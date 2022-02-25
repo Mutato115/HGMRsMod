@@ -29,13 +29,15 @@ public class TeBarrel extends TileEntity {
     private int currentPower = 0;
     private int timer = 0;
     
-    private List<UniquePosition> rhythm;
+    private UniquePosition rhythm[] = new UniquePosition[8];
     private List<TeBarrel> multiBlockBarrels;
 
     @Override
     public Block getBlockType() {
     	return BlockRegistry.barrel;
     }
+    
+    
     
     public boolean isMaster() {
         return isMaster;
@@ -45,6 +47,8 @@ public class TeBarrel extends TileEntity {
         initializeMultiblockIfNecessary();
         return master;
     }
+    
+    
 
     private void setMaster(TeBarrel master, int barrels) {
         this.master = master;
@@ -52,9 +56,7 @@ public class TeBarrel extends TileEntity {
         isMaster = master == this;
         if(isMaster) {
             Log.info("Master set to " + barrels + " blocks");
-        } else if(!isMaster && wasMaster) {
-            
-        }
+        } else if(!isMaster && wasMaster) {}
     }
 
     @Override
@@ -114,23 +116,15 @@ public class TeBarrel extends TileEntity {
         }
     }
 
-    public void onGuiButtonPress(int id) {
-
-    }
-
-    public void writeToPacket(ByteBuf buf) {
-
-    }
-
-    public void readFromPacket(ByteBuf buf) {
-    	
-    }
+    
 
     @Override
     public void readFromNBT(NBTTagCompound tag) {
         super.readFromNBT(tag);
 
         isMaster = tag.getBoolean("isMaster");
+        timer = tag.getInteger("timer");
+        currentPower = tag.getInteger("power");
     }
 
     @Override
@@ -138,9 +132,13 @@ public class TeBarrel extends TileEntity {
         super.writeToNBT(tag);
 
         tag.setBoolean("isMaster", isMaster);
+        tag.setInteger("timer", timer);
+        tag.setInteger("power", currentPower);
     }
     
-    public List<UniquePosition> getRhythm() {
+    
+    
+    public UniquePosition[] getRhythm() {
     	return isMaster ? this.rhythm : getMaster().getRhythm();
     }
     
