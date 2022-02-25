@@ -22,6 +22,7 @@ public class BlockBarrel extends BlockContainer {
 		this.setHardness(1.0f);
 	}
 
+	
 	@Override
 	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
 		return new TeBarrel();
