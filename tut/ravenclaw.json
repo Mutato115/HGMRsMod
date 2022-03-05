@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "question": "tut:Frage 1",
+      "answer": "tut:Antwort 1"
+    },
+    {
+      "question": "tut:Frage 2",
+      "answer": "tut:Antwort 2"
+    },
+    {
+      "question": "tut:Frage 3",
+      "answer": "tut:Antwort 3"
+    }
+  ]
+}
