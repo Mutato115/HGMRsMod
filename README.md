@@ -4,3 +4,7 @@
 *Zur Zeit existieren die Blöcke für folgende Häuser:*
 
 *1. Ravenclaw*
+
+*Die Mod beinhaltet eine **Client-** und eine **Serverversion**.
+
+**Viel Spaß!**
