@@ -5,6 +5,6 @@
 
 *1. Ravenclaw*
 
-*Die Mod beinhaltet eine **Client-** und eine **Serverversion**.
+*Die Mod beinhaltet eine **Client-** und eine **Serverversion**.*
 
 **Viel Spaß!**
